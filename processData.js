@@ -22,6 +22,11 @@ fs.unlinkAsync(destPath)
         return fs.readFileAsync(path.join(__dirname, 'data', file))
           .then((res) => JSON.parse(res)
           ).reduce((accum, elem) => {
+            // On May 1, they changed the columns names
+            if (elem['Departamento de Salud'] !== undefined) {
+              elem.Departamento = elem['Departamento de Salud'];
+              elem.Casos = elem['Casos acumulados desde 31-01-2020'];
+            }
             if (elem.Departamento != null) {
               accum.push({ dataset: elem.Departamento, x: date, y: elem.Casos });
             }
