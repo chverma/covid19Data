@@ -1,0 +1,23 @@
+{
+  "name": "covid19data",
+  "version": "1.0.0",
+  "description": "Download and process covid19 data from dadesobertes.gva.es",
+  "main": "apiDadesCovid.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chverma/covid19Data.git"
+  },
+  "author": "chverma",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/chverma/covid19Data/issues"
+  },
+  "homepage": "https://github.com/chverma/covid19Data#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "request": "^2.88.2"
+  }
+}
