@@ -11,9 +11,9 @@ fs.unlinkAsync(destPath)
     return fs.readdirAsync(directoryPath)
       .map((file) => {
         var fileDetails = file.split('.')[0];
-        var day = fileDetails.substring(0, 2);
-        var month = fileDetails.substring(2, 4);
-        var year = fileDetails.substring(4, 8);
+        var day = fileDetails.substring(6, 8);
+        var month = fileDetails.substring(4, 6);
+        var year = fileDetails.substring(0, 4);
         var strDate = `${year}-${month}-${day}`;
         var date = new Date(strDate);
         if (file === '.gitignore') {
